@@ -6,7 +6,15 @@ export default defineConfig({
   plugins: [react()],
   server: {
     open: true,
-    port: 3000
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'https://evilinsult.com',
+        changeOrigin: true,
+        rewrite: (path => path.replace(/^\/api/, ''))
+      }
+    }
+    
   }
   
 })

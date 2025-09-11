@@ -5,7 +5,9 @@ export const GetInsulted = () => {
     const [insult, setInsult] = useState('')
 
     const getInsulted = useCallback(async ()=> {
-        const response = await fetch('https://cors-anywhere.herokuapp.com/https://evilinsult.com/generate_insult.php?lang=en&type=json')
+
+        
+        const response = await fetch('https://evilinsult.com/generate_insult.php?lang=en&type=json')
         const data = await response.json()
         setInsult(data.insult)
         
