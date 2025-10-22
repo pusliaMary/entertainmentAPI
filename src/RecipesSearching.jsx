@@ -18,6 +18,7 @@ export const RecipesSearching = () => {
       const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${inputSubmited}&app_id=10c64d0f&app_key=019a427d6f0c04d8ba0964f6f48a4c4f`)
       const data = await response.json()
       setRecipes (data.hits)
+      
           
     } 
 
@@ -34,6 +35,7 @@ export const RecipesSearching = () => {
   const finalSubmit = (e) => {
     e.preventDefault()
     setInputSubmited(search)
+    
   }
 
   
