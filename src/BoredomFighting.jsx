@@ -1,7 +1,8 @@
 import { useCallback } from "react"
 import { useEffect, useState } from "react"
+import { useTranslation } from 'react-i18next';
 
-export const BoredomFighting = () => {
+export const BoredomFighting = ({lang}) => {
 
     const [advice, setAdvice] = useState('')
 
@@ -22,7 +23,7 @@ export const BoredomFighting = () => {
     return (
         <div className="container">
             
-            <button onClick={getAdvice}>Click</button>
+            <button onClick={getAdvice}>{t ('Click')}</button>
 
             <p>{advice}</p>
 

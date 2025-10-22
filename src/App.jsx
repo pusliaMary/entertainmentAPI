@@ -1,13 +1,11 @@
-import { useState } from 'react'
 import './App.css'
-import React from 'react';
-
 
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link, 
+  Navigate
 } from 'react-router-dom';
 
 
@@ -32,14 +30,15 @@ function App() {
       <h1>{t ('Welcome')}</h1>
       <button onClick={toggleLang}>{i18n.language === 'en' ? 'RU' : 'EN'}</button>
     </div>
-    <nav className='nav'>
+
+    <nav className='nav'> <Link to='/'></Link>
       <Link to = "/BoredomFighting" className="link">{t ('Boredom fighting')}</Link>
-      <Link to = "/GetInsulted" className="link">Get insulted</Link>
-      <Link to = "/RecipesSearching" className="link">Recipes searching</Link>
+      <Link to = "/GetInsulted" className="link">{t ('Get insulted')}</Link>
+      <Link to = "/RecipesSearching" className="link">{t ('Recipes searching')}</Link>
     </nav>
 
-    <Routes>
-      <Route path="/BoredomFighting" element={<BoredomFighting />} />
+    <Routes> <Route path="/" element={<Navigate to='/BoredomFighting' replace/>} />
+      <Route path="/BoredomFighting" element={<BoredomFighting lang={toggleLang}/>} />
       <Route path="/GetInsulted" element={<GetInsulted />} />
       <Route path="/RecipesSearching" element={<RecipesSearching />} />
     </Routes>
