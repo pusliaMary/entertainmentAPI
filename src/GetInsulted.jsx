@@ -1,5 +1,4 @@
-import { t } from "i18next";
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import { useTranslation } from 'react-i18next';
 
 export const GetInsulted = () => {
@@ -30,10 +29,10 @@ export const GetInsulted = () => {
  
     return (
         <div className="container">
-            <h2>Node.js needed to fix CORS. Soon</h2>
+            <h2>{t ("Node.js needed to fix CORS. Soon")}</h2>
             <button onClick={getInsulted}>{t ("Are you sure?")}</button>
 
-            <p>{insult}</p>
+            <p className="advice">{insult}</p>
         </div>
     )
 }

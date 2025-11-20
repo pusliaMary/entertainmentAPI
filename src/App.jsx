@@ -13,7 +13,9 @@ import { BoredomFighting } from './BoredomFighting'
 import { GetInsulted } from './GetInsulted'
 import { RecipesSearching } from './RecipesSearching'
 import { useTranslation } from 'react-i18next';
-
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(useGSAP)
 
 
 
@@ -24,6 +26,10 @@ function App() {
   const toggleLang = ()=> {
     i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
   }
+
+  useGSAP(()=> {
+    gsap.to('.link', {x:-150, duration:4,  stagger:1, ease:'bounce'})
+  })
 
   return <Router> 
     <div className='heading'>

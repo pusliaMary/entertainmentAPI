@@ -3,8 +3,11 @@
     "Boredom fighting" : "Boredom fighting",
     "Get insulted" : "Get insulted",
     "Recipes searching" : "Recipes searching",
-    "Click" : "Click",
+    "Get recipe" : "Get recipe",
+    "Get advice" : "Get advice",
     "Are you sure?" : "Are you sure?",
     "Category" : "Category",
-    "Find a recipe" : "Find a recipe"
+    "Find a recipe" : "Find a recipe",
+    "Node.js needed to fix CORS. Soon" : "Node.js needed to fix CORS. Soon",
+    "Enter ingredients..." : "Enter ingredients..."
 }

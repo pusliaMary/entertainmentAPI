@@ -3,8 +3,11 @@
     "Boredom fighting" : "Борьба со скукой",
     "Get insulted" : "Получи оскорбление",
     "Recipes searching" : "Поиск рецептов",
-    "Click" : "Получить совет",
+    "Get recipe" : "Получить рецепт",
+    "Get advice" : "Получить совет",
     "Are you sure?" : "Вы уверены?",
     "Category" : "Категория",
-    "Find a recipe" : "Найти рецепт"
+    "Find a recipe" : "Найти рецепт",
+    "Node.js needed to fix CORS. Soon" : "Скоро починю с помощью node.js",
+    "Enter ingredients..." : "Введите ингредиенты..."
 }

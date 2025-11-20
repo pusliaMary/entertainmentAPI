@@ -5,7 +5,7 @@
     justify-content: space-around;
     background-color: grey;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 100%;
     
 }
@@ -62,6 +62,31 @@ body {
   
 }
 
+
+
+.pulse {
+    animation: pulse 3s infinite ease-in-out;
+    animation-delay: 3;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+        
+    
+    
+  }
+  50% {
+    transform: scale(1.03);
+    
+    
+  }
+  100% {
+    transform: scale(1);
+    
+  }
+}
+
 button {
   margin: 30px;
   background-color: #257E54;
@@ -71,13 +96,15 @@ button {
   border: none;
   border-radius: 15px;
   font-size: 20px;
-  width:fit-content
+  width:fit-content;
+  animation: pulse 1.5s infinite ease-in-out;
   
 }
 
 .btn {
   background-color: grey;
   box-shadow: 2px 2px 2px 1px grey;
+  
 }
 
 .btn:hover {
@@ -148,21 +175,73 @@ p {
   background-color: #808080;
   display: flex;
   justify-content: center;
-  align-items: center;
+  
 }
 
 
 .loader {
   border-radius: 50%;
-   
+  border: 1px solid white; 
 }
 
+.pulse {
+    animation: pulse 3s infinite ease-in-out;
+    animation-delay: 3;
+}
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+        
+    
+    
+  }
+  50% {
+    transform: scale(1.03);
+    
+    
+  }
+  100% {
+    transform: scale(1);
+    
+  }
+}
+.advice {
+  text-transform: uppercase;
+}
+
+video {
+    width:300px;
+    height: 300px;
+    margin-top: 20px;
+  }
+
+@media all and (max-width: 1200px) {
+  .nav {
+    flex-direction: column;
+    justify-content: space-between;
+    
+    align-items: center;
+    height:150px;
+    width:100vw;
+    padding:20px 0px 30px 0px;
+  }
+
+  .loaderCont {
+    padding-bottom: 40%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+
+}
 
 @media all and (max-width: 500px) {
 
   img {
-    width: 300px;
+    width: 250px;
   }
 
   h2 {
@@ -170,7 +249,7 @@ p {
   }
 
   .card {
-    padding: 20px;
+    padding: 0px;
   }
 
   .container {
@@ -181,13 +260,23 @@ p {
   .nav {
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
 
   .link {
     margin:10px;
+    font-size: 15px;
   }
 
   .label {
     font-size: 15px;
   }
+
+  
+
+  .nav {
+    align-items: flex-end;
+
+  }
+
 }

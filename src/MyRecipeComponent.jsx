@@ -2,18 +2,19 @@ import { useState } from "react"
 
 
 
+
 function RecipeComponent ({image, label, dish, digest, ingredients}) {
 
     const [showMore, setShowMore] = useState(false)
     
-    const { t } = useTranslation();
+    
 
     return (
         <div className="column card">
             <div className="column">
-                <img src={image} alt="pic" width="400px" />
-                <h2>{label}</h2>
-                <p>{t ('Category:')} {dish}</p>
+                <img src={image} alt="pic" width="400px" />;
+                <p className="label">{label}</p>
+                <p>{dish}</p>
             </div> 
 
             <div className="row">
@@ -38,7 +39,7 @@ function RecipeComponent ({image, label, dish, digest, ingredients}) {
             <div className="column">
                 <button className='btn' onClick={()=> setShowMore(!showMore)}>{showMore ? 'Hide ingedients' : 'Show ingredients'}</button>
                     
-                    {ingredients.map((element, index)=> {
+                    {ingredients.map((element,index)=> {
                         return (
                                 <div key={index} className={showMore ? 'block' : 'none'}>
                                     <p>{element}</p>

@@ -37,7 +37,7 @@ export const BoredomFighting = () => {
 
             <p>{advice}</p>
             
-            <button onClick={getAdvice}>{t ('Click')}</button>
+            <button onClick={getAdvice}>{t ('Get advice')}</button>
 
             
 
