@@ -26,7 +26,7 @@ function App() {
   }
 
   return <Router> 
-    <div>
+    <div className='heading'>
       <h1>{t ('Welcome')}</h1>
       <button onClick={toggleLang}>{i18n.language === 'en' ? 'RU' : 'EN'}</button>
     </div>

@@ -5,13 +5,15 @@ import { useState } from "react"
 function RecipeComponent ({image, label, dish, digest, ingredients}) {
 
     const [showMore, setShowMore] = useState(false)
+    
+    const { t } = useTranslation();
 
     return (
         <div className="column card">
             <div className="column">
                 <img src={image} alt="pic" width="400px" />
                 <h2>{label}</h2>
-                <p>Category: {dish}</p>
+                <p>{t ('Category:')} {dish}</p>
             </div> 
 
             <div className="row">
